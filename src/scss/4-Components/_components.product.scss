@@ -1,0 +1,59 @@
+.c-product {
+  padding: 65px 35px 65px 35px;
+  background: palette(primary, 200);
+  color: palette(primary);
+  max-width: 770px;
+
+  @include mq(600) {
+    padding: 65px 100px 65px 35px;
+  }
+
+  @include mq(992) {
+    padding: 65px 205px 65px 70px;
+  }
+}
+
+.c-product__label {
+  display: inline-block;
+  padding: 6px 15px;
+  background-color: palette(primary);
+  color: palette(text, 100);
+  @include font(sl, 22, 500);
+}
+
+.c-product__title {
+  margin-top: 16px;
+  @include font(xmd, 42, 700);
+  @include font-family(secondary);
+
+  @include mq(1200) {
+    @include font(lg, 50, 700);
+  }
+}
+
+.c-product__description {
+  margin-top: 24px;
+  @include font(sl, 25, 400);
+  font-style: italic;
+
+  @include mq(1200) {
+    @include font(base, 27, 400);
+  }
+}
+
+.c-product__ingredients {
+  margin-top: 20px;
+  @include font(sl, 25, 400);
+
+  @include mq(1200) {
+    @include font(base, 27, 400);
+  }
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.c-product__btn {
+  margin-top: 24px;
+}

@@ -1,0 +1,80 @@
+.c-timer {
+  margin-top: 50px;
+  max-width: 467px;
+
+  @include mq($md) {
+    margin-top: 12px;
+  }
+}
+
+.c-timer__info {
+  padding: 11px 10px 70px 10px;
+  color: palette(primary);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: palette(text, 100);
+  box-shadow: 0px 3px 10px 0px rgba(31,41,55,0.1);
+
+  @include mq($md) {
+    box-shadow: none;
+  }
+
+  @include mq($lg) {
+    padding: 11px 25px 70px 25px;
+  }
+}
+
+.c-timer__title {
+  @include font(sm, 20, 700);
+
+  @include mq($md) {
+    @include font(sl, 22, 700);
+  }
+}
+
+.c-timer__text {
+  @include font(xxs, 16, 500);
+
+  @include mq($md) {
+    @include font(xs, 18, 500);
+  }
+
+  .c-timer__title + & {
+    margin-left: 38px;
+  }
+}
+
+.c-timer__wrap {
+  margin: -60px 10px 0 10px;
+  padding: 14px 20px;
+  background-color: palette(primary);
+  background: linear-gradient(90deg, #B899FF -1.13%, #8B5CF6 101.43%);
+  color: palette(text, 100);
+  box-shadow: 0px 3px 10px 0px rgba(31,41,55,0.45);
+
+  @include mq($md) {
+    margin: -60px 25px 0 25px;
+    padding: 14px 35px;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  span {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+  }
+}
+
+.c-timer__time {  
+  @include font(xl, 69, 600);
+}
+
+.c-timer__time-text {
+  @include font(sm, 21, 500);
+}

@@ -1,0 +1,16 @@
+[data-aos="line-l-r"] {
+  // opacity: 0;
+  transition-property: width;
+
+  // &.aos-animate {
+  //   opacity: 1;
+  // }
+
+  @media screen and (min-width: 768px) {
+    width: 0;
+
+    &.aos-animate {
+      width: 100%;
+    }
+  }
+}

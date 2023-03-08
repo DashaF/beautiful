@@ -1,0 +1,31 @@
+.c-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 30px;
+
+  @include mq(768) {
+    margin-bottom: 0;
+  }
+}
+
+.c-logo__icon {
+  width: 44px;
+}
+
+.c-logo__text {
+  padding-left: 8px;
+  letter-spacing: -0.04em;
+}
+
+.c-logo__title {
+  @include font(md, 18, 500);
+  color: palette(primary);
+}
+
+.c-logo__subtitle {
+  margin-top: 4px;
+  @include font(xxs, 18, 500);
+  color: palette(text);
+}

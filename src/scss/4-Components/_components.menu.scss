@@ -1,0 +1,44 @@
+.c-menu {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+
+    @include mq(768) {
+      margin-bottom: 0;
+      margin-right: 64px;
+    }
+  }
+  
+  ul {
+    li {
+      @include font(base, 25, 400);
+      
+      &:not(:first-child) {
+        margin-top: 16px;
+      }
+      
+      a {
+        color: palette(text);
+        display: inline-block;
+        transition: all 0.2s ease-out;
+
+        &:hover, 
+        &:active {
+          color: palette(primary);
+        }
+
+        span {
+          display: inline-block;
+          width: 20px;
+          margin-right: 12px;
+          vertical-align: middle
+        }
+      }
+    }
+  }
+}
+
+.c-menu__title {
+  @include font(md, 28, 600);
+  color: palette(text); 
+  margin-bottom: 20px; 
+}

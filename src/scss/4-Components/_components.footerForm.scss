@@ -1,0 +1,44 @@
+.c-footer-form {
+  display: flex;
+  border-bottom: 1.5px solid palette(text);
+
+  &:focus-within {
+    border-bottom: 1.5px solid palette(primary);
+  }
+
+  input {
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    @include font(s, 20, 500);
+    color: palette(text);
+    padding: 9px 0;
+    flex-grow: 1;
+
+    &::placeholder {
+      @include font(s, 20, 500);
+      color: palette(text, 300);
+      text-transform: uppercase;
+    }
+  }
+}
+
+.c-footer-form__button {
+  -webkit-appearance: none;
+  border: none;
+  background-color: transparent;
+  padding: 9px 5px;
+  box-sizing: content-box;
+  width: 18px;
+
+  svg {
+    color: palette(text);
+  }
+
+  &:hover,
+  &:active {
+    svg {
+      color: palette(primary);
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.s-hero {
+  position: relative;
+  padding: 90px 0 65px;
+
+  @include mq($md) {
+    padding: 110px 0 65px;
+  }
+
+  @include mq($lg) {
+    padding: 200px 0 65px;
+  }
+}
+
+.s-hero__img {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
+.s-hero__content {
+
+}
+
+.s-hero__title {
+  @include font(xl, 68, 900);
+  @include font-family(secondary);
+  color: palette(text);
+  letter-spacing: 0.02em;
+
+  @include mq($md) {
+    @include font(lg, 50, 900);
+  }
+
+  @include mq($lg) {
+    @include font(xl, 68, 900);
+  }
+
+  @include mq($xxl) {
+    @include font(xxl, 80, 900);
+  }
+
+  span {
+    color: palette(primary);
+  }
+}
+
+.s-hero__btn {
+  margin-top: 55px;
+  padding: 17px 15px 0 0;
+  max-width: 330px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+
+  @include mq($xl) {
+    margin-top: 84px;
+    padding: 27px 15px 0 0;
+  }  
+}
+
+.s-hero__btn-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: palette(text);
+}

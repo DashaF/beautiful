@@ -1,0 +1,125 @@
+//text link with arrow
+.c-btn__link {
+  display: inline-block;
+  @include font(md, 28, 500);
+  @include font-family(base);
+
+  @include mq($lg) {
+    @include font(md, 28, 500);
+  }
+}
+
+.c-btn__link--uppercase {
+  display: inline-block;
+  @include font(s, 21, 500);
+  @include font-family(base);
+  text-transform: uppercase;
+
+  @include mq($lg) {
+    @include font(base, 25, 500);
+  }
+}
+
+.c-btn__link--grey {
+  color: palette(text, 400);
+  transition: color 0.2s ease-out;
+
+  &.active {
+    color: palette(text);
+  }
+}
+
+.c-btn__link--white {
+  color: palette(text, 100);
+
+  &:hover,
+  &:active,
+  &:visited {
+    color: palette(text, 100);
+  }
+}
+
+.c-btn__link-arrow {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  margin-left: 12px;
+  vertical-align: middle;
+  transition: transform 0.2s ease-out;
+
+  a:hover > & {
+    transform: translateX(10px);
+  }
+
+  .c-btn__link & {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include mq($lg) {
+    margin-left: 18px;
+  }
+
+  .c-btn__link--grey.active & {
+      path {
+        fill: palette(text);
+        stroke: palette(text);
+      }
+  }
+}
+
+// button
+.c-btn {
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+// gradient button
+.c-btn--primary {
+  @extend .c-btn;
+  @include font(sl, 22, 600);
+  padding: 18px 53px;
+  background-size: 300% 100%;
+  background-image: linear-gradient(to right, #B899FF, #8B5CF6, #B899FF, #8B5CF6);
+  transition: all .4s ease-in-out;
+  color: palette(text, 100);
+
+  @include mq(992) {
+    @include font(base, 25, 600);
+  } 
+  
+
+  &:hover,
+  &:active {
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
+    color: palette(text, 100);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// outline button
+
+.c-btn--outline {
+  @extend .c-btn;
+  padding: 12px 18px;
+  color: palette(primary);
+  border: 1.5px solid palette(primary);
+  @include font(sl, 22, 500);
+  letter-spacing: -0.02em;
+  transition: all 0.25s ease-out;
+
+  @include mq(992) {
+    @include font(base, 25, 500);
+  }
+
+  &:hover,
+  &:active {
+    background-color: palette(primary);
+    color: palette(text, 100);
+  }
+}
